@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>Signup | Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
+    </style>
+    <script>
+        function validateform()
+        {
+        var Pass=document.f1.pswd;
+        var Cpass=document.f1.cnfp;
+        var Email=document.f1.email;
+        if (Email.value == "")
+		{
+    			window.alert("Please enter your email.");
+    			Email.focus();
+    			return false;
+		}
+		if (Email.value.indexOf("@", 0) < 0)
+		{
+    			window.alert("Please enter a valid e-mail address.");
+    			Email.focus();
+    			return false;
+		}
+
+		if (Email.value.indexOf(".", 0) < 0)
+		{
+    			window.alert("Please enter a valid e-mail address.");
+    			Email.focus();
+    			return false;
+		}
+        if(Pass.value!=Cpass.value){
+            window.alert("Confirmed Password should same as Password");
+            return false;
+        }
+        
+    }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <ul class="navbar" style="font-weight: 600;">
+                    <li class="navlist">
+                        <a href="index.html"><img src="assets/logo.png" class="logo"></a>
+                    </li>
+                    <li class="navlist" style="float:right"><a href="about.html">About Us</a></li>
+                    <li class="navlist" style="float:right"><a href="login.html" class="active">Account</a></li>
+                    <li class="navlist" style="float:right"><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <center>
+        <form name="f1" action="signup.php" method="POST" onsubmit="return validateform()">
+        <div class="form">
+            <div>
+                <img src="assets/Avatar.png" alt="Avatar" class="Avatar" height="100%" width="100%">
+            </div>
+            <div class="title">
+                Welcome
+            </div>
+            <div class="subtitle">
+                Let's register your account
+            </div>
+            <div class="input-container ic1">
+                <input id="Username" class="input" name="user" type="text" placeholder=" " required />
+                <div class="cut">
+
+                </div>
+                <label for="Username" class="placeholder">
+                        Username*
+                    </label>
+            </div>
+            <div class="input-container ic2">
+                <input id="email" class="input" name="email" type="text" placeholder=" " required/>
+                <div class="cut cut-short">
+
+                </div>
+                <label for="email" class="placeholder">
+                        Email*
+                    </label>
+            </div>
+            <div class="input-container ic2">
+                <input id="pswd" class="input" name="pswd" type="password" placeholder=" " required/>
+                <div class="cut cut-short1">
+
+                </div>
+                <label for="pswd" class="placeholder">
+                        Password*
+                    </div>
+                    <div class="input-container ic2">
+                        <input id="cnfp" class="input" name="cnfp" type="password" placeholder=" " required/>
+                        <div class="cut cut-short2">
+
+                        </div>
+                        <label for="cnfp" class="placeholder">
+                            Confirm Password*
+                        </label>
+            </div>
+
+            <button type="text" class="submit" style="vertical-align: middle;">
+                        Signup</button>
+            <p style="color: white;font-size: 12px;margin-top: 18px;margin-left: -80px;">
+                <span> Already have an account?</span> &nbsp;<a href="login.html" class="login">Login</a>
+            </p>
+        </div>
+        <p style="text-align:center; font-size:25px;margin-top: 15px;margin-bottom: 25px;">
+
+            <span><b>Let&#39;s Work Together :)</b></span>
+        </p>
+    </center>
+
+
+
+    <footer>
+        <br>
+        <div aria-disabled="false" class="flist">
+            <a data-testid="linkElement" href="https://www.behance.net/" target="_blank" rel="noopener" class="alist" aria-disabled="false">
+                <span>
+                    Behance
+                </span>
+            </a>
+        </div>
+        <div aria-disabled="false" class="flist">
+            <a data-testid="linkElement" href="https://www.instagram.com/" target="_blank" rel="noopener" class="alist" aria-disabled="false">
+                <span>
+                    Instagram
+                </span>
+            </a>
+        </div>
+        <div aria-disabled="false" class="flist">
+            <a data-testid="linkElement" href="https://www.linkedin.com/" target="_blank" rel="noopener" class="alist" aria-disabled="false">
+                <span>
+                    Linkedin
+                </span>
+            </a>
+        </div>
+        <br>
+        <br>
+
+        <div data-testid="richTextElement">
+            <p class="font_7" style="text-align:center;font-size:17px;color: white;">
+                <span class="color_11">
+                    <a data-auto-recognition="true" href="mailto:kamalspamemail8@gmail.com" style="text-decoration: none;color: white;">
+                        datasimps@gmail.com
+                    </a>​ &nbsp;| &nbsp;Phone:
+                    <span style="font-size:15px">
+                        +91 9988776655
+                    </span>
+                </span>
+            </p>
+        </div>
+
+        <div data-testid="richTextElement">
+
+            <p class="font_9" style="line-height:1.4em;text-align:center;font-size:14px">
+                <span class="color_11">
+                    &copy; 2021 by Data Simps.
+                </span>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
